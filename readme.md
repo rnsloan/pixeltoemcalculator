@@ -1,1 +1,5 @@
-# Pixel to ems calculator for OSX Dashboard
+# Pixel to em widget for OSX Dashboard
+
+## Build
+
+Add a .wdgt extension to the src directory.

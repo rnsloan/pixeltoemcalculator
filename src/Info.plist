@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowNetworkAccess</key>
+	<false/>
+	<key>CFBundleDisplayName</key>
+	<string>Pixel to em</string>
+	<key>CFBundleIdentifier</key>
+	<string>rnsloan.widget.pxtoem</string>
+	<key>CFBundleName</key>
+	<string>Pixel to em</string>
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	<key>MainHTML</key>
+	<string>index.html</string>
+</dict>
+</plist>
