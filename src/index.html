@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>PX to EM Conversion</title>
     <link rel="stylesheet" href="css/pxtoem.css"/>
     <script src="js/pxtoem.js"></script>
 </head>
 <body>
+
+<section class="front">
+    <h1>PX to EM Conversion</h1>
+    <form>
+        <label for="base">Base Pixel Size</label>
+        <input id="base" type="number" required value="16" />
+
+        <hr />
+
+        <label class="sr-only" for="pixel">pixel value</label>
+        <input id="pixel" type="number" />
+        <span>px</span>
+
+        <label class="sr-only" for="em">em value</label>
+        <input id="em" type="number" />
+        <span>em</span>
+
+    </form>
+</section>
 
 </body>
 </html>
