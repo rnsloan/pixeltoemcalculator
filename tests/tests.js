@@ -25,10 +25,6 @@ module("Conversion methods  with different base font size", {
 test( "conversion methods with different base size", function() {
     equal(changeBaseSize.convertToEms(16), 0.6957, 'check output is rounded to 4 decimal places')
     equal(changeBaseSize.convertToPixels(2.3456), 53.9488, 'convert from ems to pixels')
-})
-
-module("Functional tests", {
-    setup: function () {
-
-    }
 });
+
+//TODO: functional tests
