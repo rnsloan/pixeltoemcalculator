@@ -27,7 +27,14 @@ PxToEm.prototype.updatEmValue = function (context) {
     });
 }
 
+PxToEm.prototype.updatBaseValue = function (context) {
+    $('#base').on('keyup', function () {
+        context.basePixelValue = document.getElementById('base').value;
+    });
+}
+
 PxToEm.prototype.init = function () {
     this.updateEmValue(this);
     this.updatEmValue(this);
+    this.updatBaseValue(this);
 }
