@@ -1,5 +1,7 @@
 function PxToEm() {
     this.basePixelValue = 16;
+    this.pixelInput = document.getElementById('pixel');
+    this.emInput = document.getElementById('em');
 };
 
 PxToEm.prototype.convertToEms = function (pixelValue) {
@@ -11,24 +13,17 @@ PxToEm.prototype.convertToPixels = function (emsValue) {
 }
 
 PxToEm.prototype.updateEmValue = function (context) {
-    var pixelInput = document.getElementById('pixel');
-    var emInput = document.getElementById('em');
-
     //simulating/testing native keyup events is difficult
-    $('#pixel').on('keyup', function() {
-        var pixelValue = pixelInput.value;
-        emInput.value = context.convertToEms(pixelValue);
+    $('#pixel').on('keyup', function () {
+        var pixelValue = context.pixelInput.value;
+        context.emInput.value = context.convertToEms(pixelValue);
     });
 }
 
 PxToEm.prototype.updatEmValue = function (context) {
-    var pixelInput = document.getElementById('pixel');
-    var emInput = document.getElementById('em');
-
-    //simulating/testing native keyup events is difficult
-    $('#em').on('keyup', function() {
-        var emValue = emInput.value;
-        pixelInput.value = context.convertToPixels(emValue);
+    $('#em').on('keyup', function () {
+        var emValue = context.emInput.value;
+        context.pixelInput.value = context.convertToPixels(emValue);
     });
 }
 
