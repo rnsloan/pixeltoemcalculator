@@ -5,11 +5,13 @@ function PxToEm() {
 };
 
 PxToEm.prototype.convertToEms = function (pixelValue) {
-    return Math.abs( (pixelValue / this.basePixelValue).toFixed(4) );
+    var convertedEmsFloat = parseFloat( (pixelValue / this.basePixelValue).toFixed(4) );
+    return Math.abs(convertedEmsFloat);
 }
 
 PxToEm.prototype.convertToPixels = function (emsValue) {
-    return Math.abs( (emsValue * this.basePixelValue).toFixed(4) );
+    var convertedPixelFloat = parseFloat( (emsValue * this.basePixelValue).toFixed(4) );
+    return Math.abs(convertedPixelFloat);
 }
 
 PxToEm.prototype.updateEmValue = function (context) {
