@@ -45,12 +45,13 @@ test("pixel input dom event", 1, function () {
     equal( $('#em').val() , '0.625', 'em to pixel conversion')
 });
 
-test("pixel input dom event", 1,  function () {
+test("em input dom event", 1,  function () {
     $('#em').val('2').trigger('keyup');
     equal( $('#pixel').val() , '32', 'pixel to em conversion')
 });
 
-test("Change base value. Other values should change", 3, function () {
+
+test("Change base value input. Pixels and em calculations reflect change", 3, function () {
     equal( $('#base').val() , '16', 'base value before being changed')
     $('#base').val('20').trigger('keyup');
 
