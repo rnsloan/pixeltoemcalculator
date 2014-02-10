@@ -42,12 +42,12 @@ module("DOM events", {
 });
 test("pixel input dom event", 1, function () {
     $('#pixel').val('10').trigger('keyup');
-    equal( $('#em').val() , '0.6250', 'em to pixel conversion')
+    equal( $('#em').val() , '0.625', 'em to pixel conversion')
 });
 
 test("pixel input dom event", 1,  function () {
     $('#em').val('2').trigger('keyup');
-    equal( $('#pixel').val() , '32.0000', 'pixel to em conversion')
+    equal( $('#pixel').val() , '32', 'pixel to em conversion')
 });
 
 test("Change base value. Other values should change", 3, function () {
@@ -55,8 +55,8 @@ test("Change base value. Other values should change", 3, function () {
     $('#base').val('20').trigger('keyup');
 
     $('#pixel').val('10').trigger('keyup');
-    equal( $('#em').val() , '0.5000', 'em value after base value is changed')
+    equal( $('#em').val() , '0.5', 'em value after base value is changed')
 
     $('#em').val('0.7').trigger('keyup');
-    equal( $('#pixel').val() , '14.0000', 'pixel value after base value is changed')
+    equal( $('#pixel').val() , '14', 'pixel value after base value is changed')
 });
