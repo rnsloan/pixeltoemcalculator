@@ -20,7 +20,7 @@ PxToEm.prototype.updateEmValue = function (context) {
     });
 }
 
-PxToEm.prototype.updatEmValue = function (context) {
+PxToEm.prototype.updatePixelValue = function (context) {
     $('#em').on('keyup', function () {
         var emValue = context.emInput.value;
         context.pixelInput.value = context.convertToPixels(emValue);
@@ -35,6 +35,6 @@ PxToEm.prototype.updatBaseValue = function (context) {
 
 PxToEm.prototype.init = function () {
     this.updateEmValue(this);
-    this.updatEmValue(this);
+    this.updatePixelValue(this);
     this.updatBaseValue(this);
 }

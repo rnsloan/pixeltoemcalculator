@@ -50,14 +50,13 @@ test("pixel input dom event", 1,  function () {
     equal( $('#pixel').val() , '32.0000', 'pixel to em conversion')
 });
 
-test("change base value. Other values should change", 3, function () {
+test("Change base value. Other values should change", 3, function () {
     equal( $('#base').val() , '16', 'base value before being changed')
-
     $('#base').val('20').trigger('keyup');
 
     $('#pixel').val('10').trigger('keyup');
     equal( $('#em').val() , '0.5000', 'em value after base value is changed')
 
     $('#em').val('0.7').trigger('keyup');
-    equal( $('#pixel').val() , '14.000', 'pixel value after base value is changed')
+    equal( $('#pixel').val() , '14.0000', 'pixel value after base value is changed')
 });
