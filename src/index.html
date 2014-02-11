@@ -11,19 +11,30 @@
 
 <section class="front">
     <h1>PX to EM Conversion</h1>
+
     <form>
-        <label for="base">Base Pixel Size</label>
-        <input id="base" type="number" required value="16" />
+        <div class="grid">
+            <div class="grid__cell">
+                <label for="base">Base Pixel Size</label>
+                <input id="base" type="number" required value="16"/>
+            </div>
+        </div>
 
-        <hr />
+        <hr/>
 
-        <label class="sr-only" for="pixel">pixel value</label>
-        <input id="pixel" type="number" />
-        <span>px</span>
+        <div class="grid">
+            <div class="grid__cell">
+                <label class="sr-only" for="pixel">pixel value</label>
+                <input id="pixel" type="number"/>
+                <span>px</span>
+            </div>
 
-        <label class="sr-only" for="em">em value</label>
-        <input id="em" type="number" />
-        <span>em</span>
+            <div class="grid__cell">
+                <label class="sr-only" for="em">em value</label>
+                <input id="em" type="number"/>
+                <span>em</span>
+            </div>
+        </div>
     </form>
 </section>
 
