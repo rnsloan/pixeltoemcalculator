@@ -40,13 +40,13 @@ module("DOM events", {
         testPxToEm = {};
     }
 });
-test("pixel input dom event", 1, function () {
+test("pixel input dom event using change event", 1, function () {
     $('#pixel').val('10').trigger('change');
     equal( $('#em').val() , '0.625', 'em to pixel conversion')
 });
 
-test("em input dom event", 1,  function () {
-    $('#em').val('2').trigger('change');
+test("em input dom event using keyup event", 1,  function () {
+    $('#em').val('2').trigger('keyup');
     equal( $('#pixel').val() , '32', 'pixel to em conversion')
 });
 
