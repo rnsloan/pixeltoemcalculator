@@ -41,23 +41,23 @@ module("DOM events", {
     }
 });
 test("pixel input dom event", 1, function () {
-    $('#pixel').val('10').trigger('keyup');
+    $('#pixel').val('10').trigger('change');
     equal( $('#em').val() , '0.625', 'em to pixel conversion')
 });
 
 test("em input dom event", 1,  function () {
-    $('#em').val('2').trigger('keyup');
+    $('#em').val('2').trigger('change');
     equal( $('#pixel').val() , '32', 'pixel to em conversion')
 });
 
 
 test("Change base value input. Pixels and em calculations reflect change", 3, function () {
     equal( $('#base').val() , '16', 'base value before being changed')
-    $('#base').val('20').trigger('keyup');
+    $('#base').val('20').trigger('change');
 
-    $('#pixel').val('10').trigger('keyup');
+    $('#pixel').val('10').trigger('change');
     equal( $('#em').val() , '0.5', 'em value after base value is changed')
 
-    $('#em').val('0.7').trigger('keyup');
+    $('#em').val('0.7').trigger('change');
     equal( $('#pixel').val() , '14', 'pixel value after base value is changed')
 });

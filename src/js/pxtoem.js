@@ -16,21 +16,21 @@ PxToEm.prototype.convertToPixels = function (emsValue) {
 
 PxToEm.prototype.updateEmValue = function (context) {
     //simulating/testing native keyup events is difficult
-    $('#pixel').on('keyup', function () {
+    $('#pixel').on('change', function () {
         var pixelValue = context.pixelInput.value;
         context.emInput.value = context.convertToEms(pixelValue);
     });
 }
 
 PxToEm.prototype.updatePixelValue = function (context) {
-    $('#em').on('keyup', function () {
+    $('#em').on('change', function () {
         var emValue = context.emInput.value;
         context.pixelInput.value = context.convertToPixels(emValue);
     });
 }
 
 PxToEm.prototype.updatBaseValue = function (context) {
-    $('#base').on('keyup', function () {
+    $('#base').on('change', function () {
         context.basePixelValue = document.getElementById('base').value;
     });
 }
