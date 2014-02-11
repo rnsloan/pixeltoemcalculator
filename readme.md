@@ -1,5 +1,7 @@
 # Pixel to em widget for OSX Dashboard
 
+![Screenshot](screenshot.png)
+
 Converts pixel values to em values and vice-versa using a base font size.
 
 ## Install
